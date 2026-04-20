@@ -24,11 +24,13 @@
 | `app/logging_config.py` | Uncomment processor `scrub_event` trong danh sách structlog processors |
 
 **Bằng chứng:**
-- Screenshot log có `"correlation_id": "req-xxxxxxxx"` → `docs/evidence/correlation-id.png`
-- Screenshot log đã redact PII → `docs/evidence/pii-redaction.png`
+- Screenshot log có `"correlation_id": "req-xxxxxxxx"` → `docs/evidence/log-pii-redacted-email-and correlation-id.png`
+- Screenshot log đã redact PII → `docs/evidence/log-pii-redacted-creditcard.png`
 
-**Git Evidence (Member A):** https://github.com/tttduong/A20-E403-Nhom30-Day13/commit/0228cf554620421bb7bcd58a21176242e0e60f98
+**Git Evidence (Member A):** 
+code (without screenshot): https://github.com/tttduong/A20-E403-Nhom30-Day13/commit/0228cf554620421bb7bcd58a21176242e0e60f98
 
+screenshot evidence: https://github.com/tttduong/A20-E403-Nhom30-Day13/commit/ef1a6c30413590b69939aefdbca1a6dc010f55ae
 ---
 
 ## Member B — Tracing & Enrichment (Nguyễn Thị Thu Hiền)

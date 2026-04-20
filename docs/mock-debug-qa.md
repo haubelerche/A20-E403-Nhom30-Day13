@@ -1,7 +1,5 @@
 # Mock Debug Q&A — Demo Prep (Day 13 Observability Lab)
 
-> Danh sách câu hỏi giảng viên thường hỏi trong buổi demo. Mỗi thành viên nên thuộc phần mình phụ trách.
-
 ---
 
 ## Phần 1 — Logging & Correlation ID (Member A)

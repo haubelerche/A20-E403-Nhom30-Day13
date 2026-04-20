@@ -24,8 +24,12 @@
 ## 3. Technical Evidence (Group)
 
 ### 3.1 Logging & Tracing
-- [EVIDENCE_CORRELATION_ID_SCREENSHOT]: docs/evidence/correlation-id.png
-- [EVIDENCE_PII_REDACTION_SCREENSHOT]: docs/evidence/pii-redaction.png
+- [EVIDENCE_CORRELATION_ID_SCREENSHOT]: 
+docs/evidence/correlation-id.png 
+docs/evidence/log-pii-redacted-email-and correlation-id.png
+- [EVIDENCE_PII_REDACTION_SCREENSHOT]: 
+docs/evidence/pii-redaction.png
+docs/evidence/log-pii-redacted-creditcard.png
 - [EVIDENCE_TRACE_WATERFALL_SCREENSHOT]: docs/evidence/trace-waterfall.png (chụp từ Langfuse UI — span "rag_retrieval" chiếm >90% tổng duration khi inject rag_slow)
 - [TRACE_WATERFALL_EXPLANATION]: Span thú vị nhất là "rag_retrieval" — khi inject sự cố rag_slow, span này kéo dài từ ~50ms lên >4500ms, chiếm >90% tổng thời gian request. Điều này trực tiếp gây vi phạm SLO latency P95 (<3000ms) và kích hoạt alert high_latency_p95. Root cause là mock delay nhân tạo trong mock_rag.py, fix bằng cách tắt toggle qua POST /incidents/rag_slow/disable.
 
