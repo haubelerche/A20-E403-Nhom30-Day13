@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
@@ -21,6 +24,19 @@ app = FastAPI(title="Day 13 Observability Lab")
 app.add_middleware(CorrelationIdMiddleware)
 # Cùng một biến MODEL_NAME cho FakeLLM và field model trong log / trace tags
 agent = LabAgent(model=os.getenv("MODEL_NAME", "claude-sonnet-4-5"))
+
+
+@app.get("/")
+async def root() -> dict:
+    return {
+        "message": "Welcome to Day 13 Observability Lab API",
+        "endpoints": {
+            "health": "/health",
+            "metrics": "/metrics",
+            "chat": "/chat (POST)",
+            "docs": "/docs"
+        }
+    }
 
 
 @app.on_event("startup")
